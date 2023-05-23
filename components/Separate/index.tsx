@@ -13,6 +13,7 @@ import {
 
 import fetchArtWorks from '@/lib/fetchArtWorks'
 import ArtWork from '../ServerComponent/ArtWork'
+import Link from 'next/link'
 
 const preText = `
 + Separate
@@ -63,6 +64,10 @@ async function Separate(){
 
         })}
       </div>
+      <br />
+      <p><Link target="_blank" href="https://api.artic.edu">
+        https://api.artic.edu
+      </Link></p>
     </Main>
   )
 }
