@@ -18,7 +18,7 @@ async function ServerComponent(){
     border: '1px dotted black'}}>
     <br /><br />
     <p>This is a server component</p>
-    <p>with a 'server-only' directive</p>
+    <p>with a &apos;server-only&apos; directive</p>
     <br />
     <div style={{textAlign: 'center'}}>
       <pre style={{textAlign: 'left', display: 'inline-block'}}>{`
@@ -31,7 +31,7 @@ export default function Home() {
     </div>
     <br />
     <p>It is mounted as a children of a client component.</p>
-    <p>We can't use styled-components here.</p>
+    <p>We can&apos;t use styled-components here.</p>
     <br />
     <p>But, we can use it on the children</p>
     <br /><br />
