@@ -1,6 +1,7 @@
 'use client'
 import styled, { keyframes } from 'styled-components'
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 const Heading = styled.h1`
 
@@ -75,7 +76,7 @@ const StyledLink = styled(Link)`
 `
 
 
-export default function Home() {
+export default function Home({ children }:{ children?: ReactNode}) {
   return (
     <Main>
       <Heading>This is home</Heading>
@@ -97,6 +98,7 @@ export default function Home() {
         <StyledLink 
           href="https://github.com/juji/styled-next13"
           target="_blank">https://github.com/juji/styled-next13</StyledLink>
+      {children}
     </Main>
   )
 }

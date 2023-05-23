@@ -1,4 +1,5 @@
 import HomePage from '@/components/Home'
+import ServerComponent from '@/components/ServerComponent'
 
 export const metadata = {
   title: 'Home | juji',
@@ -6,5 +7,7 @@ export const metadata = {
 }
 
 export default function Home() {
-  return <HomePage />
+  return <HomePage>
+    <ServerComponent />
+  </HomePage>
 }

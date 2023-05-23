@@ -1,3 +1,4 @@
+
 import AnotherPage from '@/components/AnotherPage'
 
 export const metadata = {
