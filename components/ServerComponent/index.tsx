@@ -1,36 +1,11 @@
 import 'server-only';
-import Image from 'next/image'
+
 import Link from 'next/link'
-import styles from './serverComponent.module.scss'
+import ArtWork from './ArtWork'
 
 async function fetchArtWorks(){
   const resp = await fetch('https://api.artic.edu/api/v1/artworks?limit=5&fields=id,title,image_id,thumbnail')
   return await resp.json()
-}
-
-function ArtWork({ 
-  title, thumbnail, imageId 
-}:{ 
-  title: string, 
-  imageId: string,
-  thumbnail: { 
-    lqip: string, 
-    width: number, 
-    height: number, 
-    alt_text: string 
-  }
-}){
-
-  return <div className={styles.artwork}>
-    <Image 
-      src={`https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`}
-      width={thumbnail.width}
-      height={thumbnail.height}
-      alt={thumbnail.alt_text}
-    />
-    <p>{title}</p>
-  </div>
-
 }
 
 async function ServerComponent(){
@@ -56,12 +31,25 @@ export default function Home() {
     </div>
     <br />
     <p>It is mounted as a children of a client component.</p>
-    <p>We can't use styled-components here</p>
+    <p>We can't use styled-components here.</p>
+    <br />
+    <p>But, we can use it on the children</p>
     <br /><br />
-    <p>Here are some data fetched from 
-      <Link target="_blank" href="https://api.artic.edu">\
+    <p>Here are some data fetched from{' '}
+      <Link target="_blank" href="https://api.artic.edu">
         https://api.artic.edu
-      </Link>:</p>
+      </Link></p>
+    <br />
+    <p>It is rendered using `ArtWork` Component, <br />which is a client component using styled-components</p>
+    <div style={{textAlign: 'center'}}>
+      <pre style={{textAlign: 'left', display: 'inline-block'}}>{`
+export default function ServerComponent() {
+  return <...>
+    <ArtWork {...} />
+  </...>
+}
+    `}</pre>
+    </div>
     <div>
       {artWorks.data.map((art:any) => {
 
