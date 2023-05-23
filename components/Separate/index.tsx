@@ -30,7 +30,7 @@ async function Separate(){
       <Heading>This is Separate</Heading>
       <br />
       <p>It separates the styles and the page into two files</p>
-      <p>And marked the styles file as 'use client'</p>
+      <p>And marked the styles file as &apos;use client&apos;</p>
       <br />
       <div style={{textAlign: 'center'}}>
         <pre style={{textAlign: 'left', display: 'inline-block'}}>{preText}</pre>
