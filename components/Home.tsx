@@ -1,6 +1,6 @@
 'use client'
 import styled, { keyframes } from 'styled-components'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 const Heading = styled.h1`
 
