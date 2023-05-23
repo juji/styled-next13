@@ -1,5 +1,6 @@
 import 'server-only';
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './serverComponent.module.scss'
 
 async function fetchArtWorks(){
@@ -57,7 +58,10 @@ export default function Home() {
     <p>It is mounted as a children of a client component.</p>
     <p>We can't use styled-components here</p>
     <br /><br />
-    <p>Here are some data fetched from <code>https://api.artic.edu</code>:</p>
+    <p>Here are some data fetched from 
+      <Link target="_blank" href="https://api.artic.edu">\
+        https://api.artic.edu
+      </Link>:</p>
     <div>
       {artWorks.data.map((art:any) => {
 
