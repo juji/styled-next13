@@ -21,9 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div style={{ textAlign: 'center', padding: '21px 0'}}>
-          <Link href="/">home</Link>{' '}
-          <Link href="/another">another</Link>{' '}
-          <Link href="/separate">separate</Link>{' '}
+          <Link href="/">home</Link>{' '}|{' '}
+          <Link href="/another">another</Link>{' '}|{' '}
+          <Link href="/separate">separate</Link>{' '}|{' '}
           <Link href="/style-changes">style changes</Link>{' '}
         </div>
         <StyledComponentsRegistry>
