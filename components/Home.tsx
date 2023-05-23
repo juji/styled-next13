@@ -10,6 +10,7 @@ const Heading = styled.h1`
 
 const Main = styled.main`
   padding: 21px;
+  text-align: center;
 `
 
 const pulse = keyframes`
@@ -67,6 +68,10 @@ const HoverMessage = styled.div`
 
 const StyledLink = styled(Link)`
   color: red;
+
+  &:hover{
+    color: blue;
+  }
 `
 
 
@@ -74,6 +79,7 @@ export default function Home() {
   return (
     <Main>
       <Heading>This is heading</Heading>
+      <br />
       <Container>
         <h2> Styled Components </h2>
         <HoverMessage> Inside Container </HoverMessage>
@@ -83,10 +89,12 @@ export default function Home() {
         <PulseBlock color="purple">Ex C</PulseBlock>
         <ArrowBlock> Ex D </ArrowBlock>
         <br /><br />
+      </Container>
+      <br />
+      <p>Check out the repo:</p>
         <StyledLink 
           href="https://github.com/juji/styled-next13"
           target="_blank">https://github.com/juji/styled-next13</StyledLink>
-      </Container>
     </Main>
   )
 }
