@@ -14,7 +14,7 @@ const Main = styled.main`
   text-align: center;
 `
 
-const StyledButton = styled.button<{ $bgcolor: string }>`
+const StyledButton = styled.button<{ $bgcolor: string|null }>`
   
   margin-top: 21px;
   padding: 8px 21px;
