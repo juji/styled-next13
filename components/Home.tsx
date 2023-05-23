@@ -78,7 +78,7 @@ const StyledLink = styled(Link)`
 export default function Home() {
   return (
     <Main>
-      <Heading>This is heading</Heading>
+      <Heading>This is home</Heading>
       <Link href="/another">go to another page</Link>
       <br />
       <br />
