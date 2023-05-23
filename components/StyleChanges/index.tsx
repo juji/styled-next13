@@ -45,7 +45,7 @@ export default function StyleChanged(){
     <div style={{textAlign: 'center'}}>
       <pre style={{textAlign: 'left', display: 'inline-block'}}>{`
 
-const StyledButton = styled.button<{ $bgcolor: string }>\`
+const StyledButton = styled.button<{ $bgcolor: string|null }>\`
   
   ...
   background-color: \${p => p.$bgcolor || 'white'};
