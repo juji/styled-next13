@@ -1,5 +1,6 @@
 'use client'
 import styled, { keyframes } from 'styled-components'
+import Link from 'next/Link'
 
 const Heading = styled.h1`
 
@@ -64,6 +65,10 @@ const HoverMessage = styled.div`
 `;
 
 
+const StyledLink = styled(Link)`
+  color: red;
+`
+
 
 export default function Home() {
   return (
@@ -77,6 +82,10 @@ export default function Home() {
         <BoldBlock color="black">Ex C</BoldBlock>
         <PulseBlock color="purple">Ex C</PulseBlock>
         <ArrowBlock> Ex D </ArrowBlock>
+        <br /><br />
+        <StyledLink 
+          href="https://github.com/juji/styled-next13"
+          target="_blank">https://github.com/juji/styled-next13</StyledLink>
       </Container>
     </Main>
   )
