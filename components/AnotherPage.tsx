@@ -78,11 +78,11 @@ const StyledLink = styled(Link)`
 export default function Home() {
   return (
     <Main>
-      <Heading>This is heading</Heading>
-      <Link href="/another">go to another page</Link>
+      <Heading>This is Another Page</Heading>
+      <Link href="/">go home</Link>
       <br />
       <Container>
-        <h2> Styled Components </h2>
+        <h2> Styled </h2>
         <HoverMessage> Inside Container </HoverMessage>
         <Block>Ex A</Block>
         <Block color="green">Ex B</Block>
