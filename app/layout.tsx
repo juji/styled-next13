@@ -24,6 +24,7 @@ export default function RootLayout({
           <Link href="/">home</Link>{' '}
           <Link href="/another">another</Link>{' '}
           <Link href="/separate">separate</Link>{' '}
+          <Link href="/style-changes">style changes</Link>{' '}
         </div>
         <StyledComponentsRegistry>
           {children}

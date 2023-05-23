@@ -65,9 +65,10 @@ async function Separate(){
         })}
       </div>
       <br />
-      <p><Link target="_blank" href="https://api.artic.edu">
+      <p>Data origin: <Link target="_blank" href="https://api.artic.edu">
         https://api.artic.edu
       </Link></p>
+      <br />
     </Main>
   )
 }
