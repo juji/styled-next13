@@ -81,6 +81,7 @@ export default function Home() {
       <Heading>This is heading</Heading>
       <Link href="/another">go to another page</Link>
       <br />
+      <br />
       <Container>
         <h2> Styled Components </h2>
         <HoverMessage> Inside Container </HoverMessage>
