@@ -80,7 +80,6 @@ export default function Home({ children }:{ children?: ReactNode}) {
   return (
     <Main>
       <Heading>This is home</Heading>
-      <Link href="/another">go to another page</Link>
       <br />
       <br />
       <Container>

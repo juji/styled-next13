@@ -2,11 +2,7 @@ import 'server-only';
 
 import Link from 'next/link'
 import ArtWork from './ArtWork'
-
-async function fetchArtWorks(){
-  const resp = await fetch('https://api.artic.edu/api/v1/artworks?limit=5&fields=id,title,image_id,thumbnail')
-  return await resp.json()
-}
+import fetchArtWorks from '@/lib/fetchArtWorks'
 
 async function ServerComponent(){
 
@@ -17,7 +13,7 @@ async function ServerComponent(){
     margin: '21px auto', padding: '21px', 
     border: '1px dotted black'}}>
     <br /><br />
-    <p>This is a server component</p>
+    <p>Inside this box, is a server component</p>
     <p>with a &apos;server-only&apos; directive</p>
     <br />
     <div style={{textAlign: 'center'}}>
@@ -40,11 +36,15 @@ export default function Home() {
         https://api.artic.edu
       </Link></p>
     <br />
-    <p>It is rendered using `ArtWork` Component, <br />which is a client component using styled-components</p>
+    <p>It is rendered using `ArtWork` Component, 
+      <br />which is a client component using styled-components.</p>
+    <br />
+    <p>So the initial data fetching runs on the server.</p>
     <div style={{textAlign: 'center'}}>
       <pre style={{textAlign: 'left', display: 'inline-block'}}>{`
 export default function ServerComponent() {
   return <...>
+    <ArtWork {...} />
     <ArtWork {...} />
   </...>
 }

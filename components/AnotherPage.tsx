@@ -79,7 +79,6 @@ export default function Home() {
   return (
     <Main>
       <Heading>This is Another Page</Heading>
-      <Link href="/">go home</Link>
       <br />
       <br />
       <Container>

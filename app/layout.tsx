@@ -2,6 +2,7 @@
 import './globals.scss'
 import type { ReactNode } from 'react'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 import StyledComponentsRegistry from '@/lib/registry';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,6 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div style={{ textAlign: 'center', padding: '21px 0'}}>
+          <Link href="/">home</Link>{' '}
+          <Link href="/another">another</Link>{' '}
+          <Link href="/separate">separate</Link>{' '}
+        </div>
         <StyledComponentsRegistry>
           {children}
         </StyledComponentsRegistry>
