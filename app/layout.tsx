@@ -21,7 +21,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div style={{ textAlign: 'center', padding: '21px 0'}}>
-          MENU:{' '}
           <Link href="/">home</Link>{' '}|{' '}
           <Link href="/another">another</Link>{' '}|{' '}
           <Link href="/separate">separate</Link>{' '}|{' '}
